@@ -7,14 +7,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f8fafc;
-    --surface: #ffffff;
-    --border: #dbe3ea;
+    --bg: #ffffff;
+    --surface: #f5f7fa;
+    --border: #e2e8f0;
     --accent: #0ea5e9;
     --accent2: #2563eb;
-    --text: #0f172a;
+    --text: #1e293b;
     --muted: #64748b;
-    --card: #ffffff;
+    --card: #f8fafc;
 }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,7 +40,7 @@
   }
   .cursor-ring {
     width: 34px; height: 34px;
-    border: 1px solid rgba(0,200,255,0.35);
+    border: 1px solid rgba(14,165,233,0.35);
     border-radius: 50%;
     position: fixed; top: 0; left: 0;
     pointer-events: none; z-index: 9998;
@@ -52,8 +52,8 @@
     content: '';
     position: fixed; inset: 0;
     background-image:
-      linear-gradient(rgba(0,200,255,0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,200,255,0.025) 1px, transparent 1px);
+      linear-gradient(rgba(14,165,233,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,165,233,0.025) 1px, transparent 1px);
     background-size: 55px 55px;
     pointer-events: none; z-index: 0;
   }
@@ -64,7 +64,7 @@
     display: flex; justify-content: space-between; align-items: center;
     padding: 1.4rem 3rem;
     border-bottom: 1px solid var(--border);
-    background: rgba(7,9,15,0.9);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(24px);
   }
   .nav-logo {
@@ -116,7 +116,7 @@
 
   .hero-summary {
     font-size: 0.95rem; line-height: 1.85;
-    color: rgba(228,232,245,0.6); max-width: 520px; margin-bottom: 2.5rem;
+    color: #475569; max-width: 520px; margin-bottom: 2.5rem;
   }
 
   .hero-contacts {
@@ -140,9 +140,9 @@
     text-decoration: none; font-weight: 500; transition: all 0.25s; cursor: none;
     border: none;
   }
-  .btn-primary { background: var(--accent); color: #000; }
-  .btn-primary:hover { background: #fff; transform: translateY(-2px); }
-  .btn-ghost { border: 1px solid var(--border) !important; color: var(--muted); background: transparent; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #0284c7; transform: translateY(-2px); }
+  .btn-ghost { border: 1px solid var(--border) !important; color: var(--text); background: transparent; }
   .btn-ghost:hover { border-color: var(--accent) !important; color: var(--accent); transform: translateY(-2px); }
 
   .hero-right {
@@ -151,7 +151,7 @@
   .avatar-wrap { position: relative; width: 300px; height: 300px; }
   .avatar-ring {
     position: absolute; inset: -22px; border-radius: 50%;
-    border: 1px solid rgba(0,200,255,0.18);
+    border: 1px solid rgba(14,165,233,0.25);
     animation: rotate 18s linear infinite;
   }
   .avatar-ring::before {
@@ -163,25 +163,25 @@
   }
   .avatar-ring2 {
     position: absolute; inset: -45px; border-radius: 50%;
-    border: 1px dashed rgba(0,200,255,0.07);
+    border: 1px dashed rgba(14,165,233,0.12);
     animation: rotate 35s linear infinite reverse;
   }
   .avatar-inner {
     width: 300px; height: 300px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--surface), #141826);
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
     border: 1px solid var(--border);
     display: flex; align-items: center; justify-content: center;
     position: relative; overflow: hidden;
   }
   .avatar-inner::after {
     content: ''; position: absolute; inset: 0;
-    background: radial-gradient(circle at 35% 30%, rgba(0,200,255,0.1), transparent 60%);
+    background: radial-gradient(circle at 35% 30%, rgba(14,165,233,0.08), transparent 60%);
   }
   .avatar-initials {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4.5rem; color: var(--accent);
     letter-spacing: 0.1em; position: relative; z-index: 1;
-    text-shadow: 0 0 50px rgba(0,200,255,0.5);
+    text-shadow: 0 0 50px rgba(14,165,233,0.3);
   }
   .hero-stats {
     position: absolute; right: -90px; top: 50%;
@@ -222,7 +222,7 @@
   }
   .ticker span {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem; font-weight: 600; color: #000;
+    font-size: 0.7rem; font-weight: 600; color: #fff;
     letter-spacing: 0.14em; text-transform: uppercase;
   }
   @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -258,7 +258,7 @@
   .skill-row::before {
     content: ''; position: absolute;
     top: 0; left: 0; width: 0; height: 100%;
-    background: rgba(0,200,255,0.04);
+    background: rgba(14,165,233,0.06);
     transition: width 0.4s ease;
   }
   .skill-row:hover::before { width: 100%; }
@@ -288,7 +288,7 @@
   .timeline::before {
     content: ''; position: absolute;
     left: 0; top: 0; bottom: 0; width: 1px;
-    background: linear-gradient(to bottom, var(--accent) 0%, rgba(0,200,255,0.05) 100%);
+    background: linear-gradient(to bottom, var(--accent) 0%, rgba(14,165,233,0.1) 100%);
   }
   .tl-item {
     padding-left: 2.5rem; margin-bottom: 3.5rem;
@@ -323,7 +323,7 @@
   .tl-bullets { list-style: none; }
   .tl-bullets li {
     font-size: 0.88rem; line-height: 1.75;
-    color: rgba(228,232,245,0.58);
+    color: #475569;
     padding-left: 1.1rem; position: relative; margin-bottom: 0.35rem;
   }
   .tl-bullets li::before { content: '›'; position: absolute; left: 0; color: var(--accent); }
@@ -338,7 +338,7 @@
   }
   .cert-card::after {
     content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(0,200,255,0.05), transparent);
+    background: linear-gradient(135deg, rgba(14,165,233,0.08), transparent);
     opacity: 0; transition: opacity 0.3s;
   }
   .cert-card:hover { border-color: var(--accent); transform: translateY(-3px); }
@@ -347,8 +347,8 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--accent);
-    background: rgba(0,200,255,0.08);
-    border: 1px solid rgba(0,200,255,0.2);
+    background: rgba(14,165,233,0.1);
+    border: 1px solid rgba(14,165,233,0.25);
     padding: 0.2rem 0.5rem; border-radius: 2px;
     display: inline-block; margin-bottom: 0.9rem;
   }
@@ -458,7 +458,7 @@
     <div class="hero-tag fade-up">Microsoft 365 · Intune · Identity Engineer</div>
     <h1 class="hero-name fade-up">Mohammed<br><span>Laeque</span></h1>
     <p class="hero-role fade-up">M365 | Intune | Identity & Cloud Infrastructure</p>
-    <p class="hero-summary fade-up">4+ years delivering enterprise-scale cloud, endpoint, and hybrid identity solutions. Proven track record in tenant-to-tenant migrations, Active Directory consolidation, Intune deployments for 2,000+ devices, and large-scale endpoint security migrations across multi-domain enterprise environments.</p>
+    <p class="hero-summary fade-up">4+ years delivering enterprise-scale cloud, endpoint, and hybrid identity solutions. Proven track record in tenant-to-tenant migrations, Active Directory consolidation, and Zero Trust security implementations.</p>
     <div class="hero-contacts fade-up">
       <a href="tel:+971566550852" class="hero-contact-chip">📞 +971 56 655 0852</a>
       <a href="mailto:Laequeofficial@gmail.com" class="hero-contact-chip">✉️ Laequeofficial@gmail.com</a>
@@ -539,7 +539,7 @@
         <div class="skill-row-name">Microsoft 365<br>& Identity</div>
       </div>
       <div class="skill-row-tags">
-        <span class="tag">Exchange Online</span><span class="tag">Teams</span><span class="tag">SharePoint Online</span><span class="tag">OneDrive</span><span class="tag">Entra ID (Azure AD)</span><span class="tag">RBAC</span><span class="tag">PIM</span><span class="tag">MFA</span><span class="tag">SSPR</span><span class="tag">Conditional Access</span><span class="tag">Multi-tenant Admin</span><span class="tag">Identity Governance</span>
+        <span class="tag">Exchange Online</span><span class="tag">Teams</span><span class="tag">SharePoint Online</span><span class="tag">OneDrive</span><span class="tag">Entra ID (Azure AD)</span><span class="tag">Conditional Access</span><span class="tag">MFA</span>
       </div>
     </div>
     <div class="skill-row">
@@ -548,7 +548,7 @@
         <div class="skill-row-name">Endpoint &<br>Device Mgmt</div>
       </div>
       <div class="skill-row-tags">
-        <span class="tag">Microsoft Intune</span><span class="tag">Autopilot</span><span class="tag">Compliance Policies</span><span class="tag">Configuration Profiles</span><span class="tag">BitLocker</span><span class="tag">LAPS</span><span class="tag">Win32 App Packaging</span><span class="tag">Device Inventory</span>
+        <span class="tag">Microsoft Intune</span><span class="tag">Autopilot</span><span class="tag">Compliance Policies</span><span class="tag">Configuration Profiles</span><span class="tag">BitLocker</span><span class="tag">LAPS</span><span class="tag">Windows 11</span>
       </div>
     </div>
     <div class="skill-row">
@@ -557,7 +557,7 @@
         <div class="skill-row-name">Security &<br>Compliance</div>
       </div>
       <div class="skill-row-tags">
-        <span class="tag">Microsoft Defender for Endpoint</span><span class="tag">Defender for O365</span><span class="tag">Secure Score</span><span class="tag">CrowdStrike</span><span class="tag">Heimdal</span><span class="tag">Microsoft Purview</span><span class="tag">Sensitivity Labels</span><span class="tag">DLP</span><span class="tag">Retention</span><span class="tag">eDiscovery</span><span class="tag">Zero Trust</span>
+        <span class="tag">Microsoft Defender for Endpoint</span><span class="tag">Defender for O365</span><span class="tag">Secure Score</span><span class="tag">CrowdStrike</span><span class="tag">Heimdal</span><span class="tag">SIEM</span>
       </div>
     </div>
     <div class="skill-row">
@@ -566,7 +566,7 @@
         <div class="skill-row-name">Migration &<br>Transformation</div>
       </div>
       <div class="skill-row-tags">
-        <span class="tag">Tenant-to-Tenant M365 Migration</span><span class="tag">AD User/Domain Migration</span><span class="tag">File Server → SharePoint</span><span class="tag">Azure AD Connect</span><span class="tag">UPN Normalization</span><span class="tag">FSMO Role Transfer</span><span class="tag">AD Consolidation</span>
+        <span class="tag">Tenant-to-Tenant M365 Migration</span><span class="tag">AD User/Domain Migration</span><span class="tag">File Server → SharePoint</span><span class="tag">Azure AD Connect</span><span class="tag">Mail Migration</span>
       </div>
     </div>
     <div class="skill-row">
@@ -575,7 +575,7 @@
         <div class="skill-row-name">Automation &<br>Scripting</div>
       </div>
       <div class="skill-row-tags">
-        <span class="tag">PowerShell (EXO, Teams, Intune)</span><span class="tag">Microsoft Graph</span><span class="tag">Power Automate</span><span class="tag">Bulk CSV Operations</span><span class="tag">License Optimization</span><span class="tag">Reporting Scripts</span>
+        <span class="tag">PowerShell (EXO, Teams, Intune)</span><span class="tag">Microsoft Graph</span><span class="tag">Power Automate</span><span class="tag">Bulk CSV Operations</span><span class="tag">Scripting</span>
       </div>
     </div>
     <div class="skill-row">
@@ -584,7 +584,7 @@
         <div class="skill-row-name">Directory &<br>Infrastructure</div>
       </div>
       <div class="skill-row-tags">
-        <span class="tag">AD DS</span><span class="tag">GPO</span><span class="tag">RODC</span><span class="tag">DNS / DHCP</span><span class="tag">Windows Server 2012R2–2022</span><span class="tag">VMware vCenter</span><span class="tag">Zerto</span><span class="tag">Veeam Backup</span>
+        <span class="tag">AD DS</span><span class="tag">GPO</span><span class="tag">RODC</span><span class="tag">DNS / DHCP</span><span class="tag">Windows Server 2012R2–2022</span><span class="tag">Replication</span>
       </div>
     </div>
     <div class="skill-row">
@@ -593,7 +593,7 @@
         <div class="skill-row-name">Networking &<br>Access</div>
       </div>
       <div class="skill-row-tags">
-        <span class="tag">Cisco Meraki</span><span class="tag">SD-WAN</span><span class="tag">Auto-VPN</span><span class="tag">Site-to-Site VPN</span><span class="tag">Client VPN</span><span class="tag">Secure Access Troubleshooting</span>
+        <span class="tag">Cisco Meraki</span><span class="tag">SD-WAN</span><span class="tag">Auto-VPN</span><span class="tag">Site-to-Site VPN</span><span class="tag">Client VPN</span><span class="tag">Firewalls</span>
       </div>
     </div>
     <div class="skill-row">
@@ -602,7 +602,7 @@
         <div class="skill-row-name">IT Ops &<br>ITSM</div>
       </div>
       <div class="skill-row-tags">
-        <span class="tag">ServiceNow</span><span class="tag">ManageEngine ServiceDesk+</span><span class="tag">Incident Management</span><span class="tag">Change Management</span><span class="tag">SOPs & Runbooks</span><span class="tag">Vendor Coordination</span><span class="tag">IT Asset Management</span>
+        <span class="tag">ServiceNow</span><span class="tag">ManageEngine ServiceDesk+</span><span class="tag">Incident Management</span><span class="tag">Change Management</span><span class="tag">SOPs</span>
       </div>
     </div>
   </div>
@@ -623,7 +623,7 @@
         <li>Core M365, Intune & Identity Engineer in a multi-domain, multi-tenant enterprise with 4,500+ endpoints and thousands of users</li>
         <li>Led enterprise-wide CrowdStrike tenant migration across 7 Active Directory domains — zero endpoint security downtime, uninterrupted threat visibility</li>
         <li>Enforced Zero Trust endpoint compliance using CrowdStrike & Heimdal, strengthening device posture across all corporate workstations</li>
-        <li>Key contributor to large-scale Active Directory Consolidation & Modernization Program: decommissioned legacy DCs, transferred FSMO roles, stabilized replication health and DNS during transitions</li>
+        <li>Key contributor to large-scale Active Directory Consolidation & Modernization Program: decommissioned legacy DCs, transferred FSMO roles, stabilized replication health and DNS during transition</li>
         <li>Upgraded Azure AD Connect and transitioned source anchor from ObjectGUID → mS-DS-ConsistencyGuid, preventing duplicate cloud identities and enabling secure hybrid identity consolidation</li>
         <li>Executed cross-domain AD user migration (Alfoah → Agthia) including UPN normalization, attribute validation, access remapping, and post-migration stabilization</li>
         <li>Architected and managed Microsoft Intune for 2,000+ devices: Autopilot provisioning, compliance & config policies, BitLocker, LAPS, Conditional Access, Win32 app deployment</li>
@@ -740,7 +740,7 @@
 
   <div class="contact-grid">
     <div>
-      <p style="font-size:0.93rem; line-height:1.85; color:rgba(228,232,245,0.58); margin-bottom:0.5rem;">
+      <p style="font-size:0.93rem; line-height:1.85; color:#475569; margin-bottom:0.5rem;">
         Whether you're looking for an experienced M365 & Identity Engineer, have a project in mind, or simply want to connect — I'm always open to a conversation. Based in Abu Dhabi, UAE.
       </p>
       <div class="contact-info-list">
@@ -820,7 +820,7 @@
       cursor.style.transform = 'translate(-50%,-50%) scale(1)';
       cursor.style.background = 'var(--accent)';
       ring.style.transform = 'translate(-50%,-50%) scale(1)';
-      ring.style.borderColor = 'rgba(0,200,255,0.35)';
+      ring.style.borderColor = 'rgba(14,165,233,0.35)';
     });
   });
 </script>
